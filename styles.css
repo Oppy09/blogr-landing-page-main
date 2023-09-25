@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Overpass';
+    font-family: 'Ubuntu';
+    font-size: 16px;
     text-decoration: none;
 }
 body {
@@ -12,14 +13,18 @@ body {
     margin: 0;
 }
 header {
-    font-family: 'Ubuntu';
-    font-weight: 700;
+    font-family: 'Overpass';
+    font-weight: 600;
 }
 .container {
     width: 100%;
     height: 100%;
 }
-#top {
+.introduction {
+    background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    border-bottom-left-radius: 80px;
+}
+#introduction {
     width: 100%;
     padding: 3rem 7%;
     background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
@@ -27,14 +32,17 @@ header {
     flex-direction: column;
     gap: 5rem;
     color: hsl(0, 0%, 100%);
+    position: relative;
     background-image: url(./images/bg-pattern-intro-desktop.svg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: right;
+    backdrop-filter: inherit;
 }
 #navbar {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    z-index: 2;
 }
 .nav-menu {
     display: flex;
@@ -66,7 +74,7 @@ header {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: hsl(0, 0%, 100%);
+    color: hsla(0, 0%, 100%, 70%);
 }
 .nav-links li ul li a {
     color: hsl(208, 49%, 24%);
@@ -86,8 +94,8 @@ header {
     gap: 1rem;
 }
 .cta a {
-    color: hsl(0, 0%, 100%);
-    font-weight: 600;
+    color: hsla(0, 0%, 100%, 70%);
+    font-weight: 400;
 }
 .cta .sign-up {
     padding: .5rem .75rem;
@@ -98,4 +106,180 @@ header {
     display: flex;
     justify-content: center;
     font-weight: 700;
+}
+
+.heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.heading header {
+    font-size: 3rem;
+}
+.heading p {
+    color: hsla(0, 0%, 100%, 70%);
+}
+.heading .cta {
+    margin: 2rem auto;
+}
+.heading .cta a {
+    padding: .75rem;
+    width: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(356, 100%, 66%);
+    font-weight: 700;
+    border-radius: 20px;
+}
+.heading .cta .learn-more {
+    background-color: transparent;
+    outline: 1px solid hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
+}
+
+#top {
+    padding: 5rem 0 5rem 7%;
+    width: 100%;
+    position: relative;;
+    background-color: hsl(0, 0%, 100%);
+}
+#top header {
+    text-align: center;
+    font-size: 2rem;
+    color: hsl(208, 49%, 24%);
+}
+#top .contents {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.contents .description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.extensible-editor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: start;
+}
+.extensible-editor header span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.extensible-editor p {
+    line-height: 1.5;
+    color: hsl(207, 13%, 34%);
+}
+.content-management {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: start;
+}
+.content-management header span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.content-management p {
+    line-height: 1.5;
+    color: hsl(207, 13%, 34%);
+}
+#top .contents .illustration {
+    width: 100%;
+    height: auto;
+}
+#top .contents .illustration img {
+    position: relative;
+    top: 0;
+    right: -30%;
+}
+
+#middle {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem  0 5rem 7%;
+    background: linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    position: relative;
+    border-top-right-radius: 80px;
+}
+#middle .illustration img {
+    position: absolute;
+    top: -5rem;
+}
+#middle .contents {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: hsl(0, 0%, 100%);
+}
+.contents header span {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Overpass';
+}
+.contents p {
+    /* width: 80%; */
+    width: 55ch;
+    line-height: 2;
+}
+
+#bottom {
+    padding: 10rem 7% 5rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+}
+.simplicity p {
+    color: hsl(207, 13%, 34%);
+}
+.efficiency p {
+    color: hsl(207, 13%, 34%);
+}
+#bottom .contents {
+    position: relative;
+    overflow: hidden;
+}
+#bottom .illustration img {
+    position: relative;
+    top: 0;
+    left: -25%;
+}
+
+footer {
+    width: 100%;
+    padding: 3rem 14%;
+    background-color: hsl(240, 10%, 16%);
+    display: flex;
+    justify-content: space-between;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-links li {
+    list-style: none;
+}
+.footer-links li a {
+    color: hsl(240, 2%, 79%);
+}
+.nav-header {
+    margin-bottom: 1rem;
+}
+.nav-header a {
+    color: hsl(0, 0%, 100%) !important;
 }
